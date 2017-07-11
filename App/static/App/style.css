@@ -1,0 +1,27 @@
+body
+{
+	background-color: cadetblue;
+}
+
+.btn-primary
+{
+	margin-top: 6%;
+}
+
+.btn-success
+{
+    margin-top: 6%;
+}
+
+.btn-danger
+{
+	margin-top: 6%;
+}
+.caption h2{
+	color:indianred;
+}
+
+.panel-default{
+	background-color: red;
+}
+

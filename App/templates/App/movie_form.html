@@ -1,0 +1,31 @@
+
+{% extends 'App/main.html' %}
+
+{% block a %}
+<div class="container">
+<div class="row">
+	<div class="col-sm-12 col-md-8 col-md-offset-2">
+		<div class="panel panel-default" style="background-colo:red">
+		<div class="panel-body"> 
+             <h1 class="text-center">Add New Movie</h1>
+            <form class="form-horizotal" method="post" action="" enctype="multipart/form-data">
+            	{% csrf_token %}
+            	{% include 'App/form_temp.html' %}
+            	<div class="form-group">
+            		<div class="col-sm-offset-2 col-sm-10">
+
+                    <button class="btn btn-primary">Submit</button>
+
+            		</div>
+            	</div>
+ 
+            </form>
+	      </div>
+		</div>
+	</div>
+</div>
+</div>
+
+{% endblock %}
+
+

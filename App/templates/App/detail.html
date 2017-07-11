@@ -1,0 +1,36 @@
+{% extends 'App/main.html' %}
+
+
+{% block a %}
+<div class="container">
+  
+                                                                                       
+  <div class="table-responsive">          
+  <table class="table">
+    <thead>
+      <tr>
+        <th style="font-size:30px">Movie</th>
+        <th style="font-size:20px">Movie Name</th>
+        <th style="font-size:20px">Actor Name</th>
+        <th style="font-size:20px">Praducer</th>
+        <th style="font-size:20px">Director</th>
+        <th style="font-size:20px">Catagory</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="{% url 'index' %}">
+        	<img src="{{movie.movie_logo.url}}" width="60%" height="90%"></a>
+        </td>
+        <td style="font-size:20px;color: orangered;">{{movie.movie_name}}</td>
+        <td style="font-size:20px;color: orangered;">{{movie.actor}}</td>
+        <td style="font-size:20px;color: orangered;">{{movie.Praducer}}</td>
+        <td style="font-size:20px;color: orangered;">{{movie.Director}}</td>
+        <td style="font-size:20px;color: orangered;">{{movie.Catagory}}</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+<div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-numposts="5"></div>
+{% endblock %}

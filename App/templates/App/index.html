@@ -1,0 +1,38 @@
+<html>
+{% extends 'App/main.html' %}
+{% block a %}
+<h1 class="text-center">Your Added Movies</h1>
+
+
+{% for all1 in object_list %}
+<div class="col-sm-4 col-lg-6">
+	<div class="panel panel-default">
+	  <div class="panel-body">
+      <div class="panel-heading">
+        <div class="caption">
+             <h2>{{all1.actor}}</h2>
+         </div>
+        <a href="{% url 'detail' all1.id %}"/>
+           <img src="{{ all1.movie_logo.url }}" width="90%" height="50%">
+        </a>
+        
+
+     <!--Detail-->
+       <a href="{% url 'detail' all1.id %}"><button class="btn btn-primary"><i class="fa fa-street-view" aria-hidden="true"></i></button></a>
+
+        <a href="{% url 'movie-up' all1.id %}"><button class="btn btn-success"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button></a>
+
+
+        <a href="{% url "movie-del" all1.id %}"><button class="btn btn-danger"><i class="fa fa-times" aria-hidden="true"></i> </button></a>
+
+
+         </div>
+      </div>
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}
+
+</html>
+
